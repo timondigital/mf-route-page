@@ -12,9 +12,9 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between h-16">
+          <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
             <NavLink to="/" className="text-lg text-gray-300">
               DB App
             </NavLink>
@@ -22,7 +22,7 @@ const Navbar = () => {
               <div className="flex space-x-4">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <NavLink
-                  to="/home"
+                  to="/"
                   className={({ isActive }) => activeClass(isActive)}
                 >
                   Home
@@ -46,12 +46,9 @@ const Navbar = () => {
       </div>
       {/* Mobile menu, show/hide based on menu state. */}
       <div className="sm:hidden" id="mobile-menu">
-        <div className="space-y-1 px-2 pt-2 pb-3">
+        <div className="px-2 pt-2 pb-3 space-y-1">
           {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-          <NavLink
-            to="/home"
-            className={({ isActive }) => activeClass(isActive)}
-          >
+          <NavLink to="/" className={({ isActive }) => activeClass(isActive)}>
             Home
           </NavLink>
           <NavLink
